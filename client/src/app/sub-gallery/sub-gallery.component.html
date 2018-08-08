@@ -1,0 +1,21 @@
+<div class="boddy">
+
+  <div style="text-align:center">
+    <h2>Tabbed Image Gallery</h2>
+    <p>Click on the images below:</p>
+  </div>
+  
+  <!-- The four columns -->
+  <div class="row">
+    <div *ngFor='let i of image' class="column">
+      <img src="/assets/gallery/{{id}}/{{i}}.jpg" style="width:100%" onclick="myFunction(this);">
+    </div>
+  </div>
+  <div class='hold'>
+  <div class="container">
+    <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+    <img id="expandedImg" >
+    <div id="imgtext"></div>
+  </div>
+  </div>
+  </div>
