@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+    /* changes box model so borders and padding are no longer added to any box or element */
+}
+body {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #777;
+    padding: 30px;
+}
+
+.wrapper{
+    height: 100vh; 
+    background-image: linear-gradient(
+        to right bottom, 
+        rgba(111, 113, 213, 0.6),
+         rgba(66, 40, 180, 0.6)), 
+    url('/assets/img/red.jpg');
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    /* clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%); */
+    
+}
+.logo-box {
+    color: #fff;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* for setting button to center */
+    text-align: center;
+}
+
+.heading-primary {
+    color: #fff;
+    text-transform: uppercase;
+    -moz-box-align: center;
+    /* fix for slight upward jump in animation */
+    backface-visibility: hidden;
+}
+
+.heading-primary-main {
+    display: block;
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 25px;
+    /* long hand version */
+    animation-name: moveInTop;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+    /* 
+    other:
+    animation-iteration-count: 3;
+    animation-delay: 3s; */
+}
+
+.heading-primary-sub {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 10px;
+    animation-name: moveInBottom;
+    /* short hand version */
+    animation: moveInBottom 3s ease-out;
+    margin-bottom: 60px;
+}
+
+@keyframes moveInTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-300px);
+    }
+    80% {
+        transform: translateY(10px)
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(400px);
+    }
+    80% {
+        transform: translateY(-10px)
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+button:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+}
+/* background-image: linear-gradient(
+    to right bottom, 
+    rgba(111, 113, 213, 0.8),
+     rgba(66, 40, 180, 0.8)), 
+url('../assets/img/s3.jpg'); */

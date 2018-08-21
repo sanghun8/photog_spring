@@ -1,0 +1,26 @@
+
+.login {
+    padding: 30px 50px 10px 50px;
+    border-radius: 30px;  
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    box-shadow: 2px 3px 7px #888888;
+    background-color:rgba(101, 101, 107, 0.593);
+    color: #fff;
+         
+    
+}
+.login input{
+    margin: 10px 20px;
+}
+.login input[type=text], .login input[type=password]{
+    width: 180px;
+    height: 20px;
+    font-size: 18px;
+    border-radius: 5px;
+}
+.login input[type=submit]{
+  margin-left: 80px; 
+}
