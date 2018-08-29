@@ -17,8 +17,8 @@ body {
     height: 100vh; 
     background-image: linear-gradient(
         to right bottom, 
-        rgba(111, 113, 213, 0.6),
-         rgba(66, 40, 180, 0.6)), 
+        rgba(111, 138, 213, 0.486),
+         rgba(40, 77, 180, 0.507)), 
     url('/assets/img/red.jpg');
     background-size: cover;
     background-position: top;
